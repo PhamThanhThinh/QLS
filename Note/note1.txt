@@ -1,0 +1,25 @@
+Freelancer khó tìm job hơn
+Công ty thì PM tìm job
+
+
+GUI Linux -> không dùng (nghe nói bị lỗi bảo mật gì đấy)
+cmd Linux -> khuyên dùng
+
+Category danh mục các cuốn sách (thể loại)
+
+1 solution: n project
+4 project cho 4 layer
+
+IIS
+code trên server: sql, vs2022
+deploy trên server đó
+để dễ update chức năng/add thêm chức năng
+
+Reference Application vs Domain
+Reference Infrastructure vs Application
+
+Infrastructure: ef core sqlserver
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 8.0.0
+
+
+
