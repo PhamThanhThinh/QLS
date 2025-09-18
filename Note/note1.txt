@@ -17,9 +17,20 @@ deploy trên server đó
 
 Reference Application vs Domain
 Reference Infrastructure vs Application
+Reference Presentation vs Application & Infrastructure
 
 Infrastructure: ef core sqlserver
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 8.0.0
 
+aspdotnet core mvc
+aspdotnet core blazor (component)
 
+học thì code vô luôn razor file
+làm thì dùng services + repositories
+
+thường thì Create/Update viết chung vô 1 razor page (blazor)
+thông qua ViewModel: custom trường dữ liệu (trung gian với Models/Entities)
+
+đối với app quản lý thì dùng blazor
+reactjs angular thực tế dự án/job/công việc nó vẫn nhiều hơn mấy thằng khác
 

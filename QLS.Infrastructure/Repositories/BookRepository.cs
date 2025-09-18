@@ -19,6 +19,7 @@ namespace QLS.Infrastructure.Repositories
     //  _db = db;
     //}
 
+    // service có vòng đời lifecycle dài hơn
     public BookRepository(IDbContextFactory<QLSDbContext> db)
     {
       _db = db.CreateDbContext();
