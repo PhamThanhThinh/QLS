@@ -1,5 +1,6 @@
 ﻿@page "/create"
 @using QLS.Domain.Entities
+@using QLS.Domain.Enums
 
 <PageTitle>
   Thêm Sách
@@ -43,6 +44,32 @@
                    @bind-Value="Book.PublishDate"
                    class="form-control shadow-none">
         </InputDate>
+      </div>
+
+      @* category *@
+      <div class="mb-3">
+        <label for="category" class="form-label">
+          Danh mục sách
+        </label>
+        <InputSelect id="category"
+                     @bind-Value="Book.Category"
+                     class="form-control shadow-none">
+          @foreach (var category in Enum.GetValues(typeof(Category)))
+          {
+            <option value="@category">
+              @category.ToString()
+            </option>
+          }
+        </InputSelect>
+
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary">
+          Thêm
+        </button>
+        @* tạo thông báo *@
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
       </div>
 
     </EditForm>

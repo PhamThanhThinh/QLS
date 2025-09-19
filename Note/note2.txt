@@ -51,3 +51,43 @@ công ty bự nhân sự nhiều -> tiền nhiều -> có phòng IT
 - học và thực hành ở mức cơ bản trước
 - online
 
+
+dùng ckfinder là dùng dll dán vô là ok
+
+- desktop app
+winforms (siêu cũ)
+wpf (trung gian)
+winui (mới)
+
+- app điện thoại
+blazor hybrid maui: 
+giao diện html css
+giao diện xaml
+backend c#
+
+- web app
+react (frontend)
+aspdotnet core api (backend)
+aspdotnet core mvc (đơn giản)
+blazor server/wasm
+
+web (nhiều job: react), mobile app
+
+computer sience (phần mềm/trí tuệ nhân tạo -> tùy trường)
+software engineer (phần mềm/mạng máy tính)
+
+- đặt phòng khách sạn online
+
+- python
+- unity 2d
+- blazor
+- aspdotnet
+- react có thể kết hợp aspdotcore api
+- angular + aspdotcore
+
+
+HttpClient đăng nhập???
+
+win 10 ltsc, khuyên dùng vì có sẵn office, và đầy đủ phần mềm khác: pdf, mpc-hc, ...
+https://lehait.net/ghost-win-10-ltsc-21h2-no-full-soft-update-may-2022/
+https://lehait.net/ghost-win-10-ltsc-2024-no-full-soft-update-february-2024/

@@ -22,6 +22,7 @@ namespace QLS.Domain.Entities
     public string? Author { get; set; }
     // ngày xuất bản
     public DateTime? PublishDate { get; set; }
+    // danh mục sách
     public Category Category { get; set; }
   }
 }
