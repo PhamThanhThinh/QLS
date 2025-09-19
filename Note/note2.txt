@@ -1,0 +1,53 @@
+Thêm dữ liệu
+Đọc dữ liệu
+Sửa dữ liệu
+Xóa dữ liệu
+
+Bước 1: Viết Interface Repository
+
+
+
+
+
+Làm web truyện bằng React (backend là nodejs)
+
+
+áp dụng api: chat realtime signalR
+
+unity game 2d (ngang)
+unity game 2d rpg (top down)
+
+làm web tải hình (đăng hình)
+so khớp diễn viên nổi tiếng ở Việt Nam(toidicodedao)
+kết AI trí tuệ nhân tạo
+gọi api từ chatgpt
+tự build model (khó)
+
+
+
+windows + main
+đổi máy
+mất bản quyền
+vì máy cũ hư nguồn
+đổi máy mới => không active win TT
+
+win 10 home/pro
+win 10 long term support (mod lại thì nó active sẵn)
+
+one for all
+all for one
+ít người
+chuyện gì cũng tới tay nhân viên cntt (làm phần mềm thôi mà setup luôn phần cứng)
+
+công ty bự nhân sự nhiều -> tiền nhiều -> có phòng IT
+
+- học tiếng anh: đọc được, nói được, nghe được
+- thực hành code nhiều vô
+- tìm thêm bạn có cùng niềm đam mê -> lập nhóm -> học
+- laptop: nếu k có tiền thì mua cũ cũng được nhưng phải có từ năm 1, tận dụng thời gian
+- không chỉ loanh quanh trường đại học mà chúng ta nên tìm hiểu thêm xung quanh
+- nếu nhà có điều kiện thì không cần làm thêm mà tập trung vào học cho giỏi, code cho giỏi -> top server
+- làm quen với thầy cô, tốt nhất là thân với một thầy cô nào đó (thầy cô hướng dẫn làm đồ án tốt nghiệp)
+- học và thực hành ở mức cơ bản trước
+- online
+

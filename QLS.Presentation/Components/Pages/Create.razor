@@ -1,0 +1,55 @@
+﻿@page "/create"
+@using QLS.Domain.Entities
+
+<PageTitle>
+  Thêm Sách
+</PageTitle>
+
+<div class="row justify-content-center">
+  <div class="col-6">
+    <EditForm method="post"
+              FormName="AddBookForm"
+              Model="Book"
+              autocomplete="off">
+      <h3>
+        Thêm Sách
+      </h3>
+
+      <div class="mb-3">
+        <label for="title" class="form-label">
+          Tiêu đề cuốn sách
+        </label>
+        <InputText id="title"
+                   @bind-Value="Book.Title"
+                   class="form-control shadow-none">
+        </InputText>
+      </div>
+
+      <div class="mb-3">
+        <label for="author" class="form-label">
+          Tác giả
+        </label>
+        <InputText id="author"
+                   @bind-Value="Book.Author"
+                   class="form-control shadow-none">
+        </InputText>
+      </div>
+
+      <div class="mb-3">
+        <label for="publish-date" class="form-label">
+          Ngày xuất bản
+        </label>
+        <InputDate id="publish-date"
+                   @bind-Value="Book.PublishDate"
+                   class="form-control shadow-none">
+        </InputDate>
+      </div>
+
+    </EditForm>
+
+  </div>
+</div>
+
+@code {
+  public Book Book { get; set; } = new Book();
+}

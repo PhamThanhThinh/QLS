@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QLS.Application.Interfaces;
+using QLS.Domain.Entities;
 using QLS.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
@@ -25,5 +26,10 @@ namespace QLS.Infrastructure.Repositories
       _db = db.CreateDbContext();
     }
 
+    public async Task AddAsync(Book book)
+    {
+      _db.Books.Add(book);
+      await _db.SaveChangesAsync();
+    }
   }
 }
