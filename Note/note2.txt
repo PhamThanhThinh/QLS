@@ -91,3 +91,10 @@ HttpClient đăng nhập???
 win 10 ltsc, khuyên dùng vì có sẵn office, và đầy đủ phần mềm khác: pdf, mpc-hc, ...
 https://lehait.net/ghost-win-10-ltsc-21h2-no-full-soft-update-may-2022/
 https://lehait.net/ghost-win-10-ltsc-2024-no-full-soft-update-february-2024/
+
+
+c# làm được nhiều thứ:
+- game: unity 2d/3d
+- web: aspdotnet webforms, aspdotnet mvc .net frameworks, aspdotnet core mvc .net core, blazor server/wasm
+- app: desktop app/mobile app -> blazor hybrid maui (html, css, c#, xaml)
+- tool tự động hóa: winform, wpf, winui, cmd
