@@ -1,0 +1,62 @@
+﻿@page "/read"
+@using QLS.Application.Interfaces
+@using QLS.Domain.Entities
+@inject IBookRepository BookRepository
+
+
+<PageTitle>
+  Danh sách các cuốn sách
+</PageTitle>
+
+<div class="row justify-content-center">
+  <h3>Danh sách các cuốn sách</h3>
+
+  <div class="col-6">
+    @if (books is null)
+    {
+      <div style="color:red">Không có cuốn sách nào</div>
+    }
+    else if (books.Any())
+    {
+      @* @foreach (var item in books)
+      {
+        <div>
+          <h4>@item.Title</h4>
+          <h4>@item.Author</h4>
+          <h4>@item.PublishDate?.ToString("dd MM yyyy")</h4>
+        </div>
+      } *@
+
+
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Tên Của Cuốn Sách</th>
+              <th scope="col">Tác Giả</th>
+              <th scope="col">Ngày Xuất Bản</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var item in books)
+              {
+                <tr>
+                  <td>@item.Title</td>
+                  <td>@item.Author</td>
+                  <td>@item.PublishDate?.ToString("dd MM yyyy")</td>
+                </tr>
+              }
+          </tbody>
+        </table>
+    }
+  </div>
+</div>
+
+@code {
+  private List<Book>? books;
+
+  protected override async Task OnInitializedAsync()
+  {
+    books = await BookRepository.GetAllAsync();
+  }
+
+}

@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using QLS.Application.Interfaces;
 using QLS.Infrastructure.Data;
+using QLS.Infrastructure.Repositories;
 using QLS.Presentation.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddDbContextFactory<QLSDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("QLSContext")));
+
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 var app = builder.Build();
 

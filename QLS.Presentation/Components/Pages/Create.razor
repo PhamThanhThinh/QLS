@@ -1,15 +1,22 @@
 ﻿@page "/create"
+@using QLS.Application.Interfaces
 @using QLS.Domain.Entities
 @using QLS.Domain.Enums
+@inject IBookRepository BookRepository
+@inject NavigationManager NavigationManager
 
 <PageTitle>
   Thêm Sách
 </PageTitle>
 
+@* Enhance="true" nghĩa là không load lại trang *@
+
 <div class="row justify-content-center">
   <div class="col-6">
-    <EditForm method="post"
+    <EditForm Enhance="true"
+              method="post"
               FormName="AddBookForm"
+              OnValidSubmit="AddBook"
               Model="Book"
               autocomplete="off">
       <h3>
@@ -67,6 +74,9 @@
         <button class="btn btn-primary">
           Thêm
         </button>
+        <a href="/read" class="btn btn-success" data-enhance="false">
+          Danh sách các cuốn sách
+        </a>
         @* tạo thông báo *@
         <DataAnnotationsValidator></DataAnnotationsValidator>
         <ValidationSummary></ValidationSummary>
@@ -78,5 +88,17 @@
 </div>
 
 @code {
+  [SupplyParameterFromForm]
   public Book Book { get; set; } = new Book();
+
+  private async Task AddBook()
+  {
+    // Book.Author = Book.Author?.Trim();
+    // Book.Author = Book.Author?.Trim();
+    await BookRepository.AddAsync(Book);
+
+    // trở lại trang home
+    NavigationManager.NavigateTo("/");
+  }
+
 }

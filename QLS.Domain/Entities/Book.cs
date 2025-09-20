@@ -12,17 +12,31 @@ namespace QLS.Domain.Entities
   {
     [Key]
     public int Id { get; set; }
+
+    private string? _title;
     // tiêu đề cuốn sách: Title/BookName
-    [Required]    
+    [Required(ErrorMessage = "Vui lòng điền thông tin tiêu đề cuốn sách")]    
     [MaxLength(100)]
-    public string? Title { get; set; }
+    public string? Title
+    { 
+      get => _title;
+      set => _title = value?.Trim(); 
+    }
+
+    private string? _author;
     // tác giả
-    [Required]
     [MaxLength(100)]
-    public string? Author { get; set; }
+    [Required(ErrorMessage = "Vui lòng điền thông tin tác giả")]
+    public string? Author
+    { 
+      get => _author;
+      set => _author = value?.Trim();
+    }
     // ngày xuất bản
+    [Required(ErrorMessage = "Vui lòng điền thông tin ngày xuất bản")]
     public DateTime? PublishDate { get; set; }
     // danh mục sách
+    [EnumDataType(typeof(Category), ErrorMessage = "Vui lòng chọn danh mục")]
     public Category Category { get; set; }
   }
 }

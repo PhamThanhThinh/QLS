@@ -31,5 +31,11 @@ namespace QLS.Infrastructure.Repositories
       _db.Books.Add(book);
       await _db.SaveChangesAsync();
     }
+
+    public async Task<List<Book>> GetAllAsync()
+    {
+      var books = await _db.Books.ToListAsync();
+      return books;
+    }
   }
 }

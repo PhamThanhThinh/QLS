@@ -12,5 +12,6 @@ namespace QLS.Application.Interfaces
     // AddAsync theo quy tắt đặt tên là phải có Async
     // nếu nó có sử dụng cơ chế bất đồng bộ
     Task AddAsync(Book book);
+    Task<List<Book>> GetAllAsync();
   }
 }
