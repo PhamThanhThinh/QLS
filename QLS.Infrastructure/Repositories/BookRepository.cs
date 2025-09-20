@@ -37,5 +37,17 @@ namespace QLS.Infrastructure.Repositories
       var books = await _db.Books.ToListAsync();
       return books;
     }
+
+    public async Task<Book?> GetByIdAsync(int id)
+    {
+      var book = await _db.Books.FirstOrDefaultAsync(x => x.Id == id);
+      return book;
+    }
+
+    public async Task UpdateAsync(Book book)
+    {
+      _db.Entry(book).State = EntityState.Modified;
+      await _db.SaveChangesAsync();
+    }
   }
 }

@@ -34,6 +34,7 @@
               <th scope="col">Tên Của Cuốn Sách</th>
               <th scope="col">Tác Giả</th>
               <th scope="col">Ngày Xuất Bản</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -43,6 +44,12 @@
                   <td>@item.Title</td>
                   <td>@item.Author</td>
                   <td>@item.PublishDate?.ToString("dd MM yyyy")</td>
+                  <td>
+                    <a href="@($"/edit/{item.Id}")"
+                       class="btn btn-sm btn-primary">
+                      Sửa
+                    </a>
+                  </td>
                 </tr>
               }
           </tbody>

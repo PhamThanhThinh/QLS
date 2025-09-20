@@ -13,5 +13,7 @@ namespace QLS.Application.Interfaces
     // nếu nó có sử dụng cơ chế bất đồng bộ
     Task AddAsync(Book book);
     Task<List<Book>> GetAllAsync();
+    Task<Book?> GetByIdAsync(int id);
+    Task UpdateAsync(Book book);
   }
 }
