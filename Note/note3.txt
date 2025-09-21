@@ -1,0 +1,71 @@
+C/C++: lập trình căn bản
+C#: windowform, aspdotnet
+Java: web, desktop app, android app
+Python: lập trình căn bản
+HTML CSS JS React: cơ bản tới nâng cao
+HTML CSS JS Blazor: cơ bản tới nâng cao
+
+react, vue, ...
+
+
+winui datagrid
+quản lý kho hàng
+
+
+object
+class
+method
+private, public: tầm mức, access modifier, mức độ truy cập
+kế thừa (đơn kế thừa được dùng nhiều nhất)
+
+lịch sử phát triển:
+## lập trình thủ tục hàm
+## lập trình hướng đối tượng
+## lập trình với AI (vide coding)
+
+lập trình hướng đối tượng là gì
+có các tính chất sau:
+đóng gói
+kế thừa
+đa hình
+Abstraction (Trừu tượng)
+
+Quy Trình Đại học:
+học 
+----------------------------
+
+Quản Lý Quán Cafe Howktem
+datagrid...
+
+Học Lập Trình Căn Bản C++
+Cấu Trúc Dữ Liệu Và Giải Thuật C++
+
+C: thủ tục hàm + con trỏ
+C++: thủ tục hàm + OOP + con trỏ
+C#: thủ tục hàm + OOP
+Java: thủ tục hàm + OOP
+
+game C++ SDL, OpenGL, Cocos2dx
+auto car: C++, elipse mod code c++ vim, neovim, vscode, codeblock, devc++, vs2022
+
+C#:web, desktop app, mobile app, game unity (80%)
+Java: web, desktop app, mobile app
+
+
+
+kiến thức -> kỹ năng
+thì phải thực hành n lần
+
+
+mix: sữa + cafe + trà/chè = uống rứa mới ngon
+sữa + trà đặt/chè đặt => chống đau bụng
+sữa + trà đặt/chè đặt + men tiêu hóa + đá = ngon + chống đau bụng => bình giữ nhiệt => uống lạnh => trong phòng điều hòa 28độ C dưới cổng xả của điều hòa + mặc áo khoát
+sữa + cafe
+
+
+ori old
+hollow old
+
+700k 1GB
+
+
