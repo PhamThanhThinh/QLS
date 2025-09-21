@@ -44,10 +44,25 @@ namespace QLS.Infrastructure.Repositories
       return book;
     }
 
+    //public async Task UpdateAsync(Book book)
+    //{
+    //  _db.Entry(book).State = EntityState.Modified;
+    //  await _db.SaveChangesAsync();
+    //}
     public async Task UpdateAsync(Book book)
     {
-      _db.Entry(book).State = EntityState.Modified;
+      if (book == null)
+        throw new ArgumentNullException(nameof(book));
+
+      var existingBook = await _db.Books.FindAsync(book.Id);
+      if (existingBook == null)
+        throw new KeyNotFoundException($"Book with id {book.Id} not found");
+
+      // Cập nhật từng field cần thiết
+      _db.Entry(existingBook).CurrentValues.SetValues(book);
+
       await _db.SaveChangesAsync();
     }
+
   }
 }

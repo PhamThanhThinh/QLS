@@ -1,6 +1,7 @@
 ﻿@page "/edit/{id:int}"
 @using QLS.Application.Interfaces
 @using QLS.Domain.Entities
+@using QLS.Domain.Enums
 @inject IBookRepository BookRepository
 @inject NavigationManager NavigationManager
 
@@ -62,9 +63,9 @@
           <InputSelect id="category"
                        @bind-Value="Book.Category"
                        class="form-control shadow-none">
-            @foreach (var category in Enum.GetValues(typeof(Category)))
+            @foreach (Category category in Enum.GetValues(typeof(Category)))
             {
-              <option value="@category">
+              <option value="@(category)">
                 @category.ToString()
               </option>
             }
@@ -73,7 +74,7 @@
         </div>
         <div class="mb-3">
           <button class="btn btn-primary">
-            Thêm
+            Sửa
           </button>
           <a href="/read" class="btn btn-success" data-enhance="false">
             Danh sách các cuốn sách
@@ -96,12 +97,13 @@
   [Parameter]
   public int Id { get; set; }
 
-  [SupplyParameterFromForm]
+  // [SupplyParameterFromForm]
+  // public Book? Book { get; set; }
   public Book? Book { get; set; }
 
   protected override async Task OnInitializedAsync()
   {
-    Book ??= await BookRepository.GetByIdAsync(Id);
+    Book = await BookRepository.GetByIdAsync(Id) ?? new Book();
   }
 
   private async Task EditBook()
