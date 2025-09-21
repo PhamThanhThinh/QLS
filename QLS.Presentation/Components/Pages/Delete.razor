@@ -1,0 +1,33 @@
+﻿<h3>Delete</h3>
+
+@if (Show)
+{
+  <div>
+    <h4>Bạn có chắc không? Quá trình sẽ không thể đảo ngược lại được!</h4>
+  </div>
+  <div class="d-flex flex-row justify-content-end mt-3">
+    <button @onclick="Cancel" class="btn btn-primary">
+      Thoát
+    </button>
+    <button @onclick="Ok">
+      Xóa
+    </button>
+  </div>
+}
+
+
+
+@code {
+
+  [Parameter]
+  public bool Show { get; set; }
+
+  [Parameter]
+  public EventCallback Cancel { get; set; }
+
+  [Parameter]
+  public EventCallback Ok { get; set; }
+
+
+
+}

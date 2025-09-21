@@ -2,7 +2,8 @@
 @using QLS.Application.Interfaces
 @using QLS.Domain.Entities
 @inject IBookRepository BookRepository
-
+@inject IBookRepository BookRepository
+@inject NavigationManager NavigationManager
 
 <PageTitle>
   Danh sách các cuốn sách
@@ -27,7 +28,6 @@
         </div>
       } *@
 
-
       <table class="table">
           <thead>
             <tr>
@@ -49,6 +49,10 @@
                        class="btn btn-sm btn-primary">
                       Sửa
                     </a>
+                    <button @onclick="ConfirmDialog"
+                       class="btn btn-sm btn-primary">
+                      Xóa
+                    </button>
                   </td>
                 </tr>
               }
@@ -58,12 +62,46 @@
   </div>
 </div>
 
+@* <Delete Show="ConfirmDialog"
+        Cancel="CancelDelete"
+        Ok="DeleteBook"></Delete> *@
+
+<Delete 
+        Cancel="CancelDelete"
+        Ok="DeleteBook"></Delete>
+
 @code {
   private List<Book>? books;
 
   protected override async Task OnInitializedAsync()
   {
     books = await BookRepository.GetAllAsync();
+  }
+
+  private bool show;
+
+  [Parameter]
+  public required Book Book { get; set; }
+
+  private void ConfirmDialog()
+  {
+    show = true;
+  }
+
+  // ConfirmDialog
+  // CancelDelete
+  // DeleteBook
+
+  private void CancelDelete()
+  {
+    show = false;
+  }
+
+  private async Task DeleteBook()
+  {
+    await BookRepository.DeleteByIdAsync(Book.Id);
+    show = false;
+    NavigationManager.NavigateTo("/");
   }
 
 }

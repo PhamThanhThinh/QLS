@@ -64,5 +64,17 @@ namespace QLS.Infrastructure.Repositories
       await _db.SaveChangesAsync();
     }
 
+    public async Task DeleteByIdAsync(int id)
+    {
+      var book = await GetByIdAsync(id);
+
+      if (book is not null)
+      {
+        _db.Books.Remove(book);
+        await _db.SaveChangesAsync();
+      }
+
+    }
+
   }
 }
